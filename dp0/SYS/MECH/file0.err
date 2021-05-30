@@ -1,0 +1,46 @@
+/COM,ANSYS RELEASE Release 17.2      BUILD 17.2      UP20160718       20:21:27
+
+ *** WARNING ***                         CP =       1.656   TIME= 20:21:28
+ Using 1 iteration per substep may result in unconverged solutions for   
+ nonlinear analysis and the program may not indicate divergence in this  
+ case.  Check your results.                                              
+
+ *** WARNING ***                         CP =       1.734   TIME= 20:21:28
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       1.797   TIME= 20:21:29
+ MPC184 elements are being used in the current analysis and the          
+ NLGEOM,ON command has not been used.  Thus, only linearized behavior    
+ will be considered.  If finite rotation and large deflection effects    
+ are to be considered, please use the NLGEOM,ON command.                 
+
+ *** WARNING ***                         CP =       1.797   TIME= 20:21:29
+ The sparse solver must be used if any current technology elements with  
+ u-P formulation or MPC184 elements using Lagrangian multiplier are      
+ included in the model.  The equation solver option has been switched    
+ to the sparse solver.                                                   
+
+ *** WARNING ***                         CP =       2.016   TIME= 20:21:29
+ Material number 82 (used by element 50611 ) should normally have at     
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** WARNING ***                         CP =       3.109   TIME= 20:21:29
+ Overconstraint may occur for Lagrange multiplier or MPC based contact   
+ algorithm.                                                              
+
+ *** WARNING ***                         CP =       3.109   TIME= 20:21:29
+ Boundary conditions, coupling, and/or constraint equations have been    
+ applied on certain contact nodes (for example 13921).                   
+
+ *** WARNING ***                         CP =       4.516   TIME= 20:21:30
+ Multiple constraints have been applied on degree of freedom 2 of        
+ contact node 5942.  The program will remove certain internal MPCs.      
+ Please check the model carefully.                                       
+
+ *** WARNING ***                         CP =       7.938   TIME= 20:21:34
+ Pivoting has been activated for the Distributed Sparse Matrix Solver .  
+ The memory required may greatly exceed the predicted amount.  In that   
+ event, use the DSPOPTION command to change the memory mode and/or       
+ memory size used by the Distributed Sparse Matrix Solver.               

@@ -1,0 +1,31 @@
+﻿# encoding: utf-8
+# Release 17.2
+SetScriptVersion(Version="17.2.225")
+fileType1 = GetFileType(Name="GeometryFileType")
+ImportFile(
+    FilePath="C:/Users/VISHAL/Downloads/KR16_STEP/KR16.stp",
+    FileType=fileType1)
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = GetSystem(Name="Geometry")
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+system2 = template1.CreateSystem(
+    ComponentsToShare=[geometryComponent1],
+    Position="Right",
+    RelativeTo=system1)
+engineeringData1 = system2.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.Delete()
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+matl1 = engineeringData1.ImportMaterial(
+    Name="Aluminum Alloy",
+    Source="General_Materials.xml")
+modelComponent1 = system2.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system2.GetContainer(ComponentName="Model")
+model1.Edit()
+Save(Overwrite=True)
